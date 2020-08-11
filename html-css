@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive Mono">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+background-color: #23272a;
+color:white;
+font-family:Fredoka One;
+font-size:15px;
+text-transform:capitalize;
+}
+pre{
+color:#00aaff;
+font-family:Cutive Mono;
+font-weight:bold;
+text-transform:lowercase;
+}
+samp{
+color:white;
+font-family:Cutive Mono;
+text-transform:lowercase;
+}
+#sub{
+color:white;
+font-family:Fredoka One;
+font-size:30px;
+}
+#h{
+height:4px;
+border:0px;
+border-radius: 2px;
+width:80%;
+margin-left:0px;
+}
+#div1{
+color:white;
+background-color:#6666ff;
+width:100px;
+height:100px;
+margin:10px;
+border-radius:10px;
+padding:20px;
+font-family:Fredoka One;
+border :4px #e60073 dashed;
+float :right;
+}
+
+#div2{
+color:white;
+background:url(http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bdee.png);
+background-size:100% 100%;
+width:100px;
+height:100px;
+margin-top:100px;
+margin-right:20px;
+margin-bottom:30px;
+margin-left:250px;
+border-radius:6px;
+padding-top:70px;
+padding-right:0px;
+padding-bottom:0px;
+padding-left:50px;
+font-family:Fredoka One;
+border-width:4px;
+border-style:dotted;
+border-color:#2eb82e;
+float : right;
+box-shadow:6px 6px 4px #2eb82e;
+}
+#div3{
+color:white;
+background:url(http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png);
+background-size:100% 100%;
+width:100px;
+height:120px;
+margin:170px 10px 10px 250px;
+font-family:Fredoka One;
+padding:8px 0px 10px 50px;
+border-top-width:6px;
+border-top-style:solid;
+border-top-color:#9D00fF;
+border-left-width:6px;
+border-left-style:solid;
+border-left-color:#ff8c1a;
+border-right-width:6px;
+border-right-style:solid;
+border-right-color:#e60073;
+border-bottom-width:6px;
+border-bottom-style:solid;
+border-bottom-color:#ffdb4d;
+float :right;
+border-radius:10px;
+}
+#tf{
+background-color:white;
+border-radius:2px;
+color:black;
+}
+#tablef{
+background-color:white;
+box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+padding:10px;
+border-radius:4px;
+padding-left:36%;
+color:black;}
+#tr1 tr:hover{
+background-color:rgba(0,255,0,0.3);
+}
+#tr1 tr:nth-child(even){
+background-color:rgba(255,0,0,0.3);
+}
+#tr1 th{
+background-color:rgba(0,0,255,0.3);
+}
+form {
+width: 500px;
+border-radius:10px;
+padding: 20px;
+border: 6px #F9BE7C solid;
+margin: 0 auto;
+background:#FFF9EC;
+color:#E46472;
+}
+input[type='text'], input[type='password'], select{
+width: 380px;
+padding: 10px 5px;
+border: none;
+outline: none;
+border-bottom:3px #E46472 solid;
+background:#F9BE7C;
+color:white;
+}
+textarea {
+resize: none;
+width:376px;
+border: none;
+outline: none;
+border-bottom:3px #E46472 solid;
+background:#F9BE7C;
+color:white;
+}
+input[type='submit'] {
+background: brown;
+color: white;
+border: none;
+width: 380px;
+padding: 10px 0;
+outline: none;
+}
+input[type='submit']:hover {
+background: #6488E4;
+color: white;
+}
+input[type='text']:focus, input[type='password']:focus, select:focus {
+border-bottom:3px #F9BE7C solid;
+background:#E46472;
+}
+</style>
+</head>
+<body>
+<div style="color:white;text-align:center;font-family:Fredoka One
+;font-size: 60px;font-weight: 200;">CSS Guide</div>
+<hr style="width:90%;height:4px;background-color:#ee82ee;border:0px;  border-radius: 2px;" >
+<ul>
+  <li>Basic guide to the CSS.</li>
+  <li>White color text are variable that can be adjust accordingly.</li>
+  <li>Blue color text represent html and CSS code.</li>
+</ul>
+<div id="sub">Basic HTML Structure</div>
+<hr id="h" color=#9500ff>
+<pre>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;title><samp>Page Title</samp>&lt;/title>
+&lt;/head>
+&lt;body>
+&lt;h1><samp>This is a Heading</samp>&lt;/h1>
+&lt;p><samp>This is a paragraph</samp>.&lt;/p>
+<samp>.......contain all the display part of the webpage.......</samp>
+&lt;/body>
+&lt;/html>
+</pre>
+<div id="sub">CSS Implementtion</div>
+<hr id="h" color=#8080ff>
+<p>there are 3 ways by with we can implement CSS<br>
+&#9830; <u>Inline</u> - by using the style attribute inside HTML elements<br>
+syntax:<pre>&lt;<i>tag name</i> style = "attribute1 : <samp>value</samp>; attribute2 : <samp>value</samp>; attribute3 : <samp>value</samp>;">......&lt;/<i>tag name</i>></pre>
+&#9830; <u>Internal</u> - by using a &lt;style> element in the &lt;head> section<br>
+syntax:
+<pre>
+/*in head tag*/
+/*directly applied to a tag*/
+p{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*using id and # is used to define a id*/
+#id{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*using class and . is used to define a class*/
+.class{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*id and class are similar the only differnce is that a class can contain multiple function but a id can only one.*/
+/*in body tag*/
+&lt;p>....&lt;/p>
+/*this how you call a id*/
+&lt; div id="<samp>id</samp>">....&lt;/div>
+/*this how you call a class*/
+&lt; div .class="<samp>class</samp>">....&lt;/div></pre>
+&#9830; <u>External</u> - by using a &lt;link> element to link to an external CSS file<br>syntax:
+<pre>
+/*create a .css file in this eg "styles.css"*/
+/*directly applied to a tag*/
+p{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*using id and # is used to define a id*/
+#id{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*using class and . is used to define a class*/
+.class{
+attribute1 : <samp>value</samp>;
+attribute2 : <samp>value</samp>;
+attribute3 : <samp>value</samp>;
+.
+.
+}
+/*in html code in head tag*/
+&lt;link rel="stylesheet" href="<samp>styles.css</samp>">
+</pre>
+</p>
+<div id="sub">Div Tag Formatting</div>
+<hr id="h" color=#33ff33>
+<p>There Is No Predefined Attribute Of Div Tag, So We Can Customize it accordingly</p>
+<div id="div1">div1</div>
+<pre>
+#div1{
+color:<samp>white</samp>;
+background-color:<samp>#6666ff</samp>;
+width:<samp>100px</samp>;
+height:<samp>100px</samp>;
+margin:<samp>10px</samp>;
+border-radius:<samp>10px</samp>;
+padding:<samp>20px</samp>;
+font-family:<samp>Fredoka One</samp>;
+border :<samp>4px #e60073 dashed</samp>;
+float :<samp>right</samp>;
+}
+</pre>
+<hr style="width:90%;height:4px;background-color:grey;border:0px;  border-radius: 2px;" >
+<div id="div2">div2</div>
+<pre>
+#div2{
+color:<samp>white</samp>;
+background:url(<samp>http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bdee.png</samp>);
+background-size:<samp>100% 100%</samp>;
+width:<samp>100px</samp>;
+height:<samp>100px</samp>;
+margin-top:<samp>150px</samp>;
+margin-right:<samp>20px</samp>;
+margin-bottom:<samp>30px</samp>;
+margin-left:<samp>250px</samp>;
+border-radius:<samp>6px</samp>;
+padding-top:<samp>70px</samp>;
+padding-right:<samp>0px</samp>;
+padding-bottom:<samp>0px</samp>;
+padding-left:<samp>50px</samp>;
+font-family:<samp>Fredoka One</samp>;
+border-width:<samp>4px</samp>;
+border-style:<samp>dotted</samp>;
+border-color:<samp>#2eb82e</samp>;
+float:<samp>right</samp>;
+box-shadow:<samp>6px 6px 4px #2eb82e</samp>;
+}
+</pre>
+<hr style="width:90%;height:4px;background-color:grey;border:0px;  border-radius: 2px;" >
+<div id="div3">div3</div>
+<pre>
+#div3{
+color:<samp>white</samp>;
+background:url(<samp>http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png</samp>);
+background-size:<samp>100% 100%</samp>;
+width:<samp>100px</samp>;
+height:<samp>120px</samp>;
+margin:<samp>170px 10px 10px 250px</samp>;
+font-family:<samp>Fredoka One</samp>;
+padding:<samp>8px 0px 10px 50px</samp>;
+border-top-width:<samp>6px</samp>;
+border-top-style:<samp>solid</samp>;
+border-top-color:<samp>#9D00fF</samp>;
+border-left-width:<samp>6px</samp>;
+border-left-style:<samp>solid</samp>;
+border-left-color:<samp>#ff8c1a</samp>;
+border-right-width:<samp>6px</samp>;
+border-right-style:<samp>solid</samp>;
+border-right-color:<samp>#e60073</samp>;
+border-bottom-width:<samp>6px</samp>;
+border-bottom-style:<samp>solid</samp>;
+border-bottom-color:<samp>#ffdb4d</samp>;
+float :<samp>right</samp>;
+border-radius:<samp>10px</samp>;
+background-repeat:<samp>no-repaet</samp>;
+<samp>background-postion:/*center, center top, right top,etc;*/
+/*all other properties can be applied*/</samp>
+}
+</pre>
+<hr style="width:90%;height:4px;background-color:grey;border:0px;  border-radius: 2px;" >
+<div id="sub">text formatting</div>
+<hr id="h" color=#ffff4d>
+<p>Font style</p>
+<pre>Font-family:<samp>sofia</samp>;</pre>
+<div id="tf" style="font-family:Sofia;">Font style is changed.</div>
+<p>Font size</p>
+<pre>Font-size:<samp>20px</samp>;</pre>
+<div id="tf"style="font-size:20px;">Font size is changed.</div>
+<p>Font color</p>
+<pre>color:<samp>#ff00ff</samp>;</pre>
+<div id="tf"style="color:#ff00ff;">Font color is changed.</div>
+<p>text align</p>
+<pre>text-align:<samp>center</samp>;</pre>
+<div id="tf"style="text-align:center;">text align is center now. It can be right also.</div>
+<p>Underline</p>
+<pre>text-decoration:<samp>underline</samp>;</pre>
+<div id="tf"style="text-decoration:underline;padding-bottom:4px">Underline text.</div>
+<p>Overline</p>
+<pre>text-decoration:<samp>overline</samp>;</pre>
+<div id="tf"style="text-decoration:overline;padding-top:6px;">Overline text.</div>
+<p>line-through</p>
+<pre>text-decoration:<samp>line-through</samp>;</pre>
+<div id="tf"style="text-decoration:line-through;">line-through text.</div>
+<p>uppercase text</p>
+<pre>text-transform:<samp>uppercase</samp>;</pre>
+<div id="tf"style="text-transform: uppercase;">text coverted to uppercase.</div>
+<p>lowercase text</p>
+<pre>text-transform:<samp>lowercase</samp>;</pre>
+<div id="tf"style="text-transform: lowercase">text coverted to lowercase.</div>
+<p>capitalize text</p>
+<pre>text-transform:<samp>capitalize</samp>;</pre>
+<div id="tf"style="text-transform: capitalize;">text coverted to capitalized.ever first letter is capital.</div>
+<p>letter spacing</p>
+<pre>letter-spacing:<samp>6px</samp>;</pre>
+<div id="tf"style="letter-spacing:6px">this is letter spacing.</div>
+<p>word spacing</p>
+<pre>word-spacing:<samp>10px</samp>;</pre>
+<div id="tf"style="word-spacing:10px">this is word spacing.</div>
+<p>italic text</p>
+<pre>font-style:<samp>italic</samp>;</pre>
+<div id="tf"style="font-style:italic;">italic text.</div>
+<p>Small Caps</p>
+<pre>font-variant:<samp>Small-Caps</samp>;</pre>
+<div id="tf"style="font-variant:small-caps;">Small Caps Text.</div>
+<p>bold text</p>
+<pre>font-weight:<samp>bold</samp>;</pre>
+<div id="tf"style="font-weight:bold;">bold text.</div>
+<p>bold text</p>
+<pre>font-weight:<samp>bold</samp>;</pre>
+<div id="tf"style="hover:background-color:red">bold text.</div>
+<div id="sub">table formatting</div>
+<hr id="h" color=#ffa500>
+<p>table with basic syntax</p>
+<pre>
+&lt;table>
+  &lt;tr>
+  &lt;th><samp>First Name</samp>&lt;/th>
+  &lt;th><samp>Last Name</samp>&lt;/th>
+  &lt;th><samp>Points</samp>&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+  &lt;td><samp>Peter</samp>&lt;/td>
+  &lt;td><samp>Griffin</samp>&lt;/td>
+  &lt;td><samp>$100</samp>&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+  &lt;td><samp>Lois</samp>&lt;/td>
+  &lt;td><samp>Griffin</samp>&lt;/td>
+  &lt;td><samp>$150</samp>&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+  &lt;td><samp>Joe</samp>&lt;/td>
+  &lt;td><samp>Swanson</samp>&lt;/td>
+  &lt;td><samp>$300</samp>&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+  &lt;td><samp>Cleveland</samp>&lt;/td>
+  &lt;td><samp>Brown</samp>&lt;/td>
+  &lt;td><samp>$250</samp>&lt;/td>
+  &lt;/tr>
+&lt;/table>
+</pre>
+<pre>
+td,th,table{
+border: <samp>2px solid black</samp>;
+border-spacing:<samp>5px</samp>;
+border-radius:<samp>2px</samp>;
+}
+</pre>
+<div id="tablef" >
+<table style="border: 2px solid black;border-radius:2px;border-spacing:5px;">
+  <tr>
+  <th style="border: 2px solid black;">First Name</th>
+  <th style="border: 2px solid black;">Last Name</th>
+  <th style="border: 2px solid black;">Points</th>
+  </tr>
+  <tr>
+  <td style="border: 2px solid black;">Peter</td>
+  <td style="border: 2px solid black;">Griffin</td>
+  <td style="border: 2px solid black;">$100</td>
+  </tr>
+  <tr>
+  <td style="border: 2px solid black;">Lois</td>
+  <td style="border: 2px solid black;">Griffin</td>
+  <td style="border: 2px solid black;">$150</td>
+  </tr>
+  <tr>
+  <td style="border: 2px solid black;">Joe</td>
+  <td style="border: 2px solid black;">Swanson</td>
+  <td style="border: 2px solid black;">$300</td>
+  </tr>
+  <tr>
+  <td style="border: 2px solid black;">Cleveland</td>
+  <td style="border: 2px solid black;">Brown</td>
+  <td style="border: 2px solid black;">$250</td>
+  </tr>
+</table>
+</div>
+<p>border-collapse,height,width,text-align,vertical-align</p>
+<pre>
+table{
+border: <samp>2px solid black</samp>;
+border-spacing:<samp>5px</samp>;
+height:<samp>250px</samp>;
+width:<samp>250px</samp>;
+}
+#tr2{
+text-align:<samp>left</samp>;
+vertical-align:<samp>top</samp>;
+}
+#tr3{
+text-align:<samp>right</samp>;
+vertical-align:<samp>bottom</samp>;
+}
+#tr4{
+text-align:<samp>center</samp>;
+vertical-align:<samp>center</samp>;
+}
+td{
+padding:<samp>2px</samp>;
+}
+</pre>
+<div id="tablef">
+<table style="border: 4px solid black;border-radius:2px;border-spacing:5px;border-collapse: collapse;height:250px;width:250px;">
+  <tr>
+  <th style="border: 4px solid black;padding:2px;">First Name</th>
+  <th style="border: 4px solid black;padding:px;">Last Name</th>
+  <th style="border: 4px solid black;padding:2px;">Points</th>
+  </tr>
+  <tr>
+  <td style="border: 4px solid black;text-align:left;vertical-align:top;padding:2px;">Peter</td>
+  <td style="border: 4px solid black;text-align:left;vertical-align:top;padding:2px;">Griffin</td>
+  <td style="border: 4px solid black;text-align:left;vertical-align:top;padding:2px;">$100</td>
+  </tr>
+  <tr>
+  <td style="border: 4px solid black;text-align:right;vertical-align:bottom;padding:2px;">Lois</td>
+  <td style="border: 4px solid black;text-align:right;vertical-align:bottom;padding:2px;">Griffin</td>
+  <td style="border: 4px solid black;text-align:right;vertical-align:bottom;padding:2px;">$150</td>
+  </tr>
+  <tr>
+  <td style="border: 4px solid black;text-align:center;vertical-align:center;padding:20px;">Joe</td>
+  <td style="border: 4px solid black;text-align:center;vertical-align:center;padding:20px;">Swanson</td>
+  <td style="border: 4px solid black;text-align:center;vertical-align:center;padding:2px;">$300</td>
+  </tr>
+  <tr>
+  <td style="border: 4px solid black;padding:2px;">Cleveland</td>
+  <td style="border: 4px solid black;padding:2px;">Brown</td>
+  <td style="border: 4px solid black;padding:2px;">$250</td>
+  </tr>
+</table>
+</div>
+<p>few more feature like, hover and nth-child()</p>
+<pre>
+table{
+width:<samp>300px</samp>;
+border-collapse:<samp>collapse</samp>;
+}
+tr{
+border-bottom:<samp>4px solid</samp>;
+}
+th{
+text-align:<samp>left</samp>;
+padding:<samp>2px</samp>;
+background-color:<samp>rgba(0,0,255,0.3)</samp>;
+}
+tr:hover{
+background-color:<samp>rgba(0,255,0,0.3)</samp>;
+}
+tr:nth-child(<samp>even</samp>){
+<samp>/*even and odd select the row*/</samp>
+background-color:<samp>rgba(255,0,0,0.3)</samp>;
+}
+</pre>
+<div id="tablef">
+<table id="tr1"  style="width:300px;border-collapse:collapse;">
+  <tr style=" border:4px solid;">
+  <th style="text-align:left;padding:2px;">First Name</th>
+  <th style="text-align:left;padding:2px;">Last Name</th>
+  <th style="text-align:left;padding:2px;">Points</th>
+  </tr>
+  <tr style=" border-bottom:4px solid;">
+  <td>Peter</td>
+  <td>Griffin</td>
+  <td>$100</td>
+  </tr>
+  <tr style=" border-bottom:4px solid;">
+  <td>Lois</td>
+  <td>Griffin</td>
+  <td>$150</td>
+  </tr>
+  <tr style=" border-bottom:4px solid;">
+  <td>Joe</td>
+  <td>Swanson</td>
+  <td>$300</td>
+  </tr>
+  <tr style=" border-bottom:4px solid;">
+  <td>Cleveland</td>
+  <td>Brown</td>
+  <td>$250</td>
+  </tr>
+</table>
+</div>
+<p>there are few more tags like rowapam, colspam, id, caption.</p>
+<div id="sub">form</div>
+<hr id="h" color="#ff4d4d">
+<p>forms are written with in <pre>&lt;form>
+.
+.
+.
+&lt;/form></pre>#CSS code<p>
+<pre>
+form{
+width: <samp>500px</samp>;
+border-radius:<samp>10px</samp>;
+padding:<samp> 20px</samp>;
+border:<samp> 6px #F9BE7C solid</samp>;
+margin:<samp> 0 auto</samp>;
+background:<samp>#FFF9EC</samp>;
+color:<samp>#E46472</samp>;
+}
+input[type='<samp>text</samp>'], input[type='<samp>password</samp>'], select{
+width:<samp> 380px</samp>;
+padding:<samp> 10px 5px</samp>;
+border:<samp> none</samp>;
+outline:<samp> none</samp>;
+border-bottom:<samp>3px #E46472 solid</samp>;
+background:<samp>#F9BE7C</samp>;
+color:<samp>white</samp>;
+}
+textarea {
+resize: <samp>none</samp>;
+width:<samp>376px</samp>;
+border: <samp>none</samp>;
+outline: <samp>none</samp>;
+border-bottom:<samp>3px #E46472 solid</samp>;
+background:<samp>#F9BE7C</samp>;
+color:<samp>white</samp>;
+}
+input[type='<samp>submit</samp>'] {
+background: <samp>brown</samp>;
+color: <samp>white</samp>;
+border:<samp> none</samp>;
+width: <samp>380px</samp>;
+padding:<samp> 10px 0</samp>;
+outline: <samp>none</samp>;
+}
+input[type='<samp>submit</samp>']:hover {
+background:<samp> #6488E4</samp>;
+color:<samp> white</samp>;
+}
+input[type='<samp>text</samp>']:focus, input[type='<samp>password</samp>']:focus, select:focus {
+border-bottom:<samp>3px #F9BE7C solid</samp>;
+background:<samp>#E46472</samp>;
+}
+</pre>
+<p>#html code</p>
+<pre>
+&lt;form>
+&lt;h2><samp>Fill the Form</samp>&lt;/h2>&lt;hr>
+&lt;table>
+&lt;tr>
+&lt;td>&lt;label for="<samp>user</samp>"><samp>User Name</samp>&lt;/label>&lt;/td>
+&lt;td>&lt;input type="<samp>text</samp>" name="<samp>user</samp>" id="<samp>user</samp>">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;label for="<samp>pass</samp>"><samp>Password</samp>&lt;/label>&lt;/td>
+&lt;td>&lt;input type="<samp>password</samp>" name="<samp>pass</samp>" id="<samp>pass</samp>">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;label><samp>Gender</samp>&lt;/label>&lt;/td>
+&lt;td><samp>Male:</samp> &lt;input type="<samp>radio</samp>" name="<samp>gender</samp>" value="<samp>male</samp>"> &lt;br> 
+<samp>Female:</samp> &lt;input type="<samp>radio</samp>" name="<samp>gender</samp>" value="<samp>female</samp>">&lt;br>
+&lt;br>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;label><samp>Skills</samp>&lt;/label>&lt;/td>
+&lt;td>
+<samp>HTML:</samp> &lt;input type="<samp>checkbox</samp>" name="<samp>html</samp>" value="<samp>html</samp>"> &lt;br> 
+<samp>CSS:</samp> &lt;input type="<samp>checkbox</samp>" name="<samp>css</samp>" value="<samp>css</samp>"> &lt;br>
+ <samp>PHP:</samp> &lt;input type="<samp>checkbox</samp>" name="<samp>php</samp>" value="<samp>php</samp>"> 
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;label for="<samp>country</samp>"><samp>Select your country</samp>&lt;/label>&lt;/td>
+&lt;td>
+&lt;select id="<samp>country</samp>" name="<samp>country</samp>">
+&lt;option value=""><samp>Select your country</samp>&lt;/option>
+&lt;option value="<samp>af</samp>"><samp>africa</samp>&lt;/option>
+&lt;option value="<samp>in</samp>"><samp>India</samp>&lt;/option>
+&lt;option value="<samp>uk</samp>"><samp>United Kingdom</samp>&lt;/option>
+&lt;option value="<samp>cn</samp>"><samp>Canada</samp>&lt;/option>
+&lt;/select>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;label for="<samp>comments</samp>"><samp>Comments</samp>&lt;/label>&lt;/td>
+&lt;td>&lt;textarea rows="<samp>10</samp>" cols="<samp>50</samp>">&lt;/textarea>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>
+&lt;input type="<samp>submit</samp>" value="<samp>Click to submit</samp>" name="<samp>submit_form</samp>">
+&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;/form>
+</pre>
+<form>
+<h2>Fill the Form</h2><hr>
+<table>
+<tr>
+<td><label for="user">User Name</label></td>
+<td><input type="text" name="user" id="user"></td>
+</tr>
+<tr>
+<td><label for="pass">Password</label></td>
+<td><input type="password" name="pass" id="pass"></td>
+</tr>
+<tr>
+<td><label>Gender</label></td>
+<td>Male: <input type="radio" name="gender" value="male"> <br>Female: <input type="radio" name="gender" value="female"><br>
+<br></td>
+</tr>
+<tr>
+<td><label>Skills</label></td>
+<td>HTML: <input type="checkbox" name="html" value="html"> <br> CSS: <input type="checkbox" name="css" value="css"> <br> PHP: <input type="checkbox" name="php" value="php"> </td>
+</tr>
+<tr>
+<td><label for="country">Select your country</label></td>
+<td>
+<select id="country" name="country">
+<option value="">Select your country</option>
+<option value="pk">africa</option>
+<option value="in">India</option>
+<option value="uk">United Kingdom</option>
+<option value="cn">Canada</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for="comments">Comments</label></td>
+<td><textarea rows="10" cols="50"></textarea></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="submit" value="Click to submit" name="submit_form">
+</td>
+</tr>
+</table>
+</form>
+<div id="sub">page layout</div>
+<hr id="h" color="#d55d5d">
+<p>using &lt;div> tag divide the page into areas like header, navigation, middle, left, right, footer.</p>
+<p>this will help in design the webpage effectivly.</p>
+<hr style="width:95%;height:2px;background-color:white;border:0px;  border-radius: 2px;">
+<div style="text-align:center;font-size:10px;font-family:sofia;">
+&#9824;  &#9827;  &#9829;  &#9830; the webpage is entirly made using css and html &#9830;  &#9829;  &#9827;  &#9824;<br>
+&#9824;  &#9827;  &#9829;  &#9830; the page is design for educational and learing purpose &#9830;  &#9829;  &#9827;  &#9824;
+</div>
+</body>
+</html>
